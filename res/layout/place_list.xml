@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#f84f4f"
+        android:gravity="center"
+        android:text="Select User"
+        android:textColor="#FFF"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+    
+    <ImageButton
+        android:id="@+id/btn_CancelR"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ListView
+        android:id="@+id/placesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       
+        android:layout_below="@+id/tittle"
+        android:background="#FFF"
+        android:divider="#000"
+        android:dividerHeight="1dp"
+        android:listSelector="#f84f4f" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/boder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:gravity="center"
+        android:layout_below="@+id/placesList"
+        android:padding="3dp"
+        android:text="Click on user to see taglist"
+        android:textColor="#000" />
+
+</RelativeLayout>

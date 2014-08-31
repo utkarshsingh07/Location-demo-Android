@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtheader"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#f84f4f"
+        android:gravity="center"
+        android:text="SIGNUP"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtheader" >
+
+        <RelativeLayout
+            android:id="@+id/laymain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/back_trans_grey"
+                    android:gravity="center" >
+
+                    <EditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#fff"
+                        android:hint="Enter your full name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="13sp" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/edtUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/edtName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:hint="Enter user name (E-mail)"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="13sp" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/editMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/edtUser"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:hint="Enter mobile number"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:maxLength="15"
+                        android:textSize="13sp" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/editAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/editMob"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:hint="Enter your age"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="10dp"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:textSize="13sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/txtGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/editAge"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Select Gender"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/edPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/txtGender"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:hint="Enter password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="13sp" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/edPasswordConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/edPassword"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:hint="Enter password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="13sp" >
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edPasswordConfirm"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_red_selector"
+                        android:text="SignUp"
+                        android:textColor="#FFF" />
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#95000000"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Please wait..."
+            android:textColor="#fff"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

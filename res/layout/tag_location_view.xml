@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/txtheader"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#f84f4f" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tagged Location"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/txtheaderbtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtheader"
+        android:background="#FFF" >
+
+        <Button
+            android:id="@+id/btn_tagList"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/v1"
+            android:background="@drawable/result_selected_btn"
+            android:onClick="tagList"
+            android:text="Tag List"
+            android:textSize="14dp" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btn_mapResults"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/v1"
+            android:background="@drawable/result_unselected_btn"
+            android:onClick="mapResults"
+            android:text="Map Result"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listViewTag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtheaderbtns" >
+    </ListView>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtheaderbtns" >
+
+        <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mapTAg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment" />
+    </FrameLayout>
+
+    
+    <RelativeLayout
+        android:id="@+id/loader1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#95000000"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Please wait..."
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+</RelativeLayout>
